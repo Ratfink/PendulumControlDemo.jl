@@ -18,7 +18,9 @@ function pendulum_run(;fps=60)
     ax = Axis(fig[1, 1], aspect=1)
     limits!(ax, [-1.5, 1.5], [-1.5, 1.5])
 
-    img = load("assets/feedback_control.png")
+    path = joinpath(splitpath(@__DIR__)[begin:end-1])
+    filename = joinpath(path, "assets", "feedback_control.png")
+    img = load(filename)
     image(fig[1, 2][3, 1], img', axis = (aspect = DataAspect(), yreversed = true, xticksvisible = false, xticklabelsvisible = false, xgridvisible = false, yticksvisible = false, yticklabelsvisible = false, ygridvisible = false, leftspinevisible=false, rightspinevisible=false, topspinevisible=false, bottomspinevisible=false))
 
     x = Observable([π - 0.1, 0.0])
