@@ -14,7 +14,7 @@ your OS and how you installed the language.  From the Julia REPL, run:
 
 ```julia
 using Pkg
-Pkg.add(url="https://github.com/Ratfink/PendulumControlDemo.jl#no-joystick")
+Pkg.add(url="https://github.com/Ratfink/PendulumControlDemo.jl", rev="no-joystick")
 ```
 
 Thanks to Julia's built-in package manager, this should automatically install
